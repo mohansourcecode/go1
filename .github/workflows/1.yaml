@@ -1,0 +1,11 @@
+name: peforming rust project checkout 
+
+on: [push]
+
+jobs:
+  rust-project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository 
+        uses: actions/checkout@v3
+    
