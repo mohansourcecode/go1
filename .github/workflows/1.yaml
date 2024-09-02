@@ -29,4 +29,11 @@ jobs:
         with:
           username: ${{secrets.docker_username}}
           password: ${{secrets.docker_password}} 
+      - name: bulding and pushing the docker image to the dockerr GitHub
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{secrets.docker_username}}/mohango:1.0
+
       
